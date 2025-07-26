@@ -1,4 +1,5 @@
 # FIMoney Inventory Management API - Complete Testing Guide
+# Generated using AI
 
 ## 🚀 Quick Start
 

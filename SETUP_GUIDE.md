@@ -1,5 +1,7 @@
 # FIMoney Inventory Management Tool - Setup Guide
 
+# generated using AI
+
 This guide will help you set up and run the complete FIMoney Inventory Management System with both backend and frontend.
 
 ## 🎯 Quick Start

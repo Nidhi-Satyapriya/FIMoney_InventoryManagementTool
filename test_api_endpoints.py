@@ -1,8 +1,9 @@
-#!/usr/bin/env python3
 """
 Comprehensive API Testing Script for FIMoney Inventory Management
 Tests all endpoints including the new pagination feature
 """
+
+# generated using AI
 
 import requests
 import json
