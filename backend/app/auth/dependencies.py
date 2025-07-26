@@ -8,6 +8,7 @@ from app.models.model import User, UserRole
 from app.schemas.schema import Token
 import os
 
+# for user+ admin portal
 # Security configuration
 SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key-here")
 ALGORITHM = "HS256"

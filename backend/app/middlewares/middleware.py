@@ -6,7 +6,10 @@ from typing import Callable
 import json
 from datetime import datetime
 
-# Configure logging
+# Initialized middleware for admin portal
+
+#  AI suggested codes for the desired functionalities:-
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 

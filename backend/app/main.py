@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.routes import users, products
 import os
 
-# Create FastAPI app with proper metadata
+# Initializing FastAPI app 
 app = FastAPI(
     title="FIMoney Inventory Management Tool API",
     description="A comprehensive inventory management system API",
@@ -12,7 +12,7 @@ app = FastAPI(
     redoc_url="/redoc"
 )
 
-# Configure CORS for production
+# CORS for production
 origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://localhost:3000").split(",")
 
 app.add_middleware(
@@ -23,7 +23,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include user and product routers
+# user and product routers
 app.include_router(users.router, prefix="/api/v1", tags=["Authentication"])
 app.include_router(products.router, prefix="/api/v1", tags=["Products"])
 

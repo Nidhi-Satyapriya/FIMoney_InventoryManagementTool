@@ -3,7 +3,7 @@ import axios from 'axios';
 // API configuration - update this for production
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1';
 
-// Create axios instance with default configuration
+// Axios instance with default configuration
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
@@ -11,6 +11,8 @@ const api = axios.create({
   },
   timeout: 10000, // 10 second timeout
 });
+
+// AI suggestions for error handling and token management
 
 // Request interceptor to add auth token
 api.interceptors.request.use(
@@ -30,13 +32,10 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    // Handle authentication errors
     if (error.response?.status === 401) {
       localStorage.removeItem('token');
       window.location.href = '/auth';
     }
-    
-    // Handle network errors
     if (!error.response) {
       console.error('Network error:', error.message);
     }
@@ -72,7 +71,7 @@ export const updateProductQuantity = async (productId, quantity) => {
   return response.data;
 };
 
-// Legacy function for backward compatibility
+// Legacy function for backward compatibility-- AI suggested
 export const setToken = (token) => {
   if (token) {
     localStorage.setItem('token', token);
