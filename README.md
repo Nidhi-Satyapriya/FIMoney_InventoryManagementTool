@@ -2,7 +2,7 @@
 
 A complete, modern inventory management system with a FastAPI backend and React frontend. This project demonstrates a full-stack application with JWT authentication, real-time inventory tracking, and a beautiful, responsive user interface.
 
-### Postmaan Collection-https://www.postman.com/grey-crescent-113665/workspace/fimoney-backend-apis/collection/36707787-41b8e109-c347-407d-b53d-812d131672be?action=share&source=copy-link&creator=36707787
+### Postmaan Collection-https://www.postman.com/satellite-cosmologist-79259085/workspace/fimoney/request/37347687-5a2734f7-ffaa-4b03-b0d6-7aa909cee1e6?action=share&creator=37347687&ctx=documentation
 
 ## 🎯 Project Overview
 
