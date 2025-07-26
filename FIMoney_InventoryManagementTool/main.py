@@ -42,9 +42,9 @@ def main():
             log_level="info" if debug else "warning"
         )
     except KeyboardInterrupt:
-        print("\n🛑 Server stopped by user")
+        print("\n Server stopped by user")
     except Exception as e:
-        print(f"❌ Error starting server: {e}")
+        print(f"Error starting server: {e}")
         sys.exit(1)
 
 if __name__ == "__main__":
