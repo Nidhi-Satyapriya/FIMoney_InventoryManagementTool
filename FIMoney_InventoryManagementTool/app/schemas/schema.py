@@ -75,7 +75,7 @@ class ProductListResponse(BaseModel):
     products: List[ProductResponse]
     pagination: PaginationInfo
 
-# Admin Schemas-- tried making admin portal
+# Admin Schemas
 class AdminUserCreate(BaseModel):
     username: str = Field(..., min_length=3, max_length=50)
     password: str = Field(..., min_length=6)

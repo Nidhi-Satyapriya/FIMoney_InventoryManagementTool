@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-// API configuration - for production + development
+// API configuration - update this for production
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1';
 
-//  axios instance with default configuration
+// Create axios instance with default configuration
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
@@ -12,7 +12,7 @@ const api = axios.create({
   timeout: 10000, // 10 second timeout
 });
 
-// Requesting interceptor to add auth token
+// Request interceptor to add auth token
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
@@ -72,7 +72,7 @@ export const updateProductQuantity = async (productId, quantity) => {
   return response.data;
 };
 
-// Legacy function for backward compatibility-- AI suggested this
+// Legacy function for backward compatibility
 export const setToken = (token) => {
   if (token) {
     localStorage.setItem('token', token);

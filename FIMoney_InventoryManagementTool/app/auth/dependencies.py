@@ -15,8 +15,6 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 security = HTTPBearer()
 
-# AI usage in writing code- SHA256 hashing, JWT authentication & authorization
-
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     """Create JWT access token"""
     to_encode = data.copy()
@@ -117,5 +115,3 @@ def require_user_role():
             return await func(*args, current_user=current_user, **kwargs)
         return wrapper
     return decorator 
-
-
