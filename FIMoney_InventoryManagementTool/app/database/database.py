@@ -18,4 +18,8 @@ except errors.ServerSelectionTimeoutError as err:
     print(f"MongoDB connection error: {err}")
     print("Please ensure MongoDB is running and the connection string is correct.")
 except Exception as err:
-    print(f"Database error: {err}") 
+    print(f"Database error: {err}")
+
+def get_database():
+    """Get database instance"""
+    return db 
