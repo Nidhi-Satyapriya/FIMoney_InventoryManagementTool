@@ -3,8 +3,6 @@ Comprehensive API Testing Script for FIMoney Inventory Management
 Tests all endpoints including the new pagination feature
 """
 
-# Generated using AI
-
 import requests
 import json
 import time
