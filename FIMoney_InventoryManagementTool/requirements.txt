@@ -4,14 +4,15 @@ uvicorn[standard]==0.24.0
 
 # Database
 pymongo==4.6.0
+motor==3.3.2
 
 # Authentication & Security
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 python-dotenv==1.0.0
 
-# Data validation
-pydantic==2.5.0
+# Data validation - Updated for Python 3.13 compatibility
+pydantic>=2.6.0
 
 # HTTP client for testing
 requests==2.31.0 

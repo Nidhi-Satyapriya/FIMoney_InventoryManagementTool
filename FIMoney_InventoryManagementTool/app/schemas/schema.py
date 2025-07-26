@@ -9,6 +9,11 @@ class UserCreate(BaseModel):
     password: str = Field(..., min_length=6)
     role: UserRole = UserRole.USER
 
+class UserOut(BaseModel):
+    id: str
+    username: str
+    role: UserRole
+
 class UserLogin(BaseModel):
     username: str
     password: str
@@ -59,6 +64,16 @@ class ProductResponse(BaseModel):
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
     created_by: Optional[str] = None
+
+class ProductOut(BaseModel):
+    id: str
+    name: str
+    type: str
+    sku: str
+    quantity: int
+    price: float
+    description: Optional[str] = None
+    image_url: Optional[str] = None
 
 # Pagination Schema
 class PaginationInfo(BaseModel):
