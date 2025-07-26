@@ -43,4 +43,8 @@ def get_products(skip: int = 0, limit: int = 10):
     products = list(db.products.find().skip(skip).limit(limit))
     for p in products:
         p["_id"] = str(p["_id"])
-    return products 
+    return products
+
+def get_total_products_count():
+    """Get total number of products for pagination"""
+    return db.products.count_documents({}) 
