@@ -12,7 +12,7 @@ def get_user_by_username(username: str):
 
 def create_user(user: model.User):
     user_dict = user.dict()
-    # Do NOT hash the password here; it is already hashed in the route
+    user_dict["password"] = pwd_context.hash(user_dict["password"])
     result = db.users.insert_one(user_dict)
     user_dict["_id"] = str(result.inserted_id)
     return user_dict

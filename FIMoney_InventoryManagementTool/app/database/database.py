@@ -10,7 +10,10 @@ DATABASE_NAME = os.getenv("DATABASE_NAME", "fimoney_inventory")
 
 db = None
 try:
-    client = MongoClient(MONGODB_URL, serverSelectionTimeoutMS=5000)
+    client = MongoClient(MONGODB_URI, serverSelectionTimeoutMS=5000)
+    # Force connection on a request as the
+    # connect=True parameter of MongoClient seems
+    # to be useless here
     client.server_info()  # Will throw if cannot connect
     db = client[DATABASE_NAME]
     print(f"MongoDB connected successfully to database: {DATABASE_NAME}")
