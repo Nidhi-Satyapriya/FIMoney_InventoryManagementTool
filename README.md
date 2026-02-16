@@ -203,34 +203,6 @@ npm run build
 # Upload dist folder to hosting platform
 ```
 
-## 📊 Database Schema
-
-### Users Collection
-```json
-{
-  "_id": "ObjectId",
-  "username": "string (unique)",
-  "password": "string (hashed)",
-  "created_at": "datetime"
-}
-```
-
-### Products Collection
-```json
-{
-  "_id": "ObjectId",
-  "name": "string",
-  "type": "string",
-  "sku": "string (unique)",
-  "image_url": "string (optional)",
-  "description": "string (optional)",
-  "quantity": "integer",
-  "price": "float",
-  "created_at": "datetime",
-  "updated_at": "datetime"
-}
-```
-
 ## 🔧 Configuration
 
 ### Environment Variables
@@ -249,25 +221,6 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 VITE_API_BASE_URL=http://localhost:8000
 VITE_APP_NAME=FIMoney Inventory
 ```
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **MongoDB Connection**
-   - Ensure MongoDB is running
-   - Check connection string in .env
-   - Verify network connectivity
-
-2. **Frontend Build Issues**
-   - Clear node_modules and reinstall
-   - Check Node.js version compatibility
-   - Verify all dependencies
-
-3. **Authentication Problems**
-   - Check JWT token format
-   - Verify secret key configuration
-   - Clear browser localStorage
 
 ## 📚 Documentation
 
@@ -299,33 +252,6 @@ VITE_APP_NAME=FIMoney Inventory
 - ✅ Product management
 - ✅ Search and filtering
 - ✅ Modern UI/UX
-
-## 🔄 Future Enhancements
-
-- [ ] User roles and permissions
-- [ ] Advanced analytics dashboard
-- [ ] Bulk import/export
-- [ ] Real-time notifications
-- [ ] Mobile app
-- [ ] Multi-tenant support
-- [ ] Advanced reporting
-- [ ] Integration with external systems
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📞 Support
-
-For questions and issues:
-1. Check the documentation
-2. Review troubleshooting section
-3. Create an issue in the repository
-4. Contact the development team
 
 ## 📄 License
 
